@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+@import './styles/fonts.css';
+
+@theme {
+  --font-sans: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+    sans-serif;
+  --color-background: #f9fafb;
+  --color-surface: #ffffff;
+  --color-text: #111827;
+  --color-muted: #9ca3af;
+  --color-primary: #4f46e5;
+  --color-accent: #eef2ff;
+  --color-danger: #e11d48;
+  --color-success: #059669;
+  --color-rose: #fb7185;
+  --color-rose-bg: #fff1f2;
+  --color-amber: #d97706;
+  --color-amber-bg: #fffbeb;
+  --color-border: rgb(0 0 0 / 0.06);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dashboard-widget-scroll {
+  scrollbar-color: rgb(156 163 175 / 0.7) transparent;
+  scrollbar-width: thin;
+}
+
+.dashboard-widget-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dashboard-widget-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dashboard-widget-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgb(156 163 175 / 0.7);
+}
+
+.dashboard-widget-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgb(107 114 128 / 0.8);
+}

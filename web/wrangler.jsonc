@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "subly-web",
+  // nodejs_compat 최소 요구 날짜이자, 실제 배포와 S3 presigned URL 발급까지 검증을 통과한 값이다.
+  // 더 최신 날짜로 올리려면 별도 테스트를 거친 뒤 갱신한다 (임의로 중간 날짜로 바꾸지 말 것).
+  "compatibility_date": "2024-09-23",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "worker/index.ts",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  }
+}
